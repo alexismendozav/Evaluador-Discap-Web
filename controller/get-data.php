@@ -11,5 +11,16 @@
            return $result;
     }
    
+    //Extraction of areas
+    function getAreas($connection){
+      $query = "SELECT DISTINCT area FROM `habilidades` ORDER BY area;";
+      $areas = mysqli_query($connection,$query);   
+      $result = array();
+         if($areas && mysqli_num_rows($areas)>=1){
+           $result = $areas;
+         }
+         return $result;
+  }
+    
 
 ?>

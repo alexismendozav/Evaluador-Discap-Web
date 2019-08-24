@@ -107,8 +107,8 @@
                     }
                     
                     if(count($errors) == 0){
-                        $password_encrypted = password_hash("$password",PASSWORD_BCRYPT,['cost' => 4]);
-                        $sql = "UPDATE maestros SET nombre= '$name',apellido_paterno='$lastname',apellido_paterno='$lastname2',correo='$email',contrasena='$password_encrypted',domicilio='$address',nivel_educativo='$level' WHERE id_maestro=$id;"; 
+                        //$password_encrypted = password_hash("$password",PASSWORD_BCRYPT,['cost' => 4]);
+                        $sql = "UPDATE maestros SET nombre= '$name',apellido_paterno='$lastname',apellido_paterno='$lastname2',correo='$email',contrasena='$password',domicilio='$address',nivel_educativo='$level' WHERE id_maestro=$id;"; 
                         $guardar = mysqli_query($connection,$sql);
                         echo 'ok'; 
                     }else{
